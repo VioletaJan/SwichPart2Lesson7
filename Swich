@@ -1,1 +1,106 @@
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+
+//OPTION 1
+/*
+Write a program where calculation of month will be performed if day number of the year is given.  For example, if the day number is 10, it is January, if day number is 32 - February, if day number is 100 - April, etc.
+
+Use switch control.
+Please ask the user to write the day number in the console. Read it and calculate which month it is.
+Please add correct verification in the code!
+Check with negative numbers
+Check numbers > 365 (optional: use mod to calculate number within one year)
+*/
+
+
+Console.WriteLine("Please enter the day number:");
+string Day = Console.ReadLine();
+int.TryParse(Day, out int Day2);
+
+if (Day2 <= 0)
+{
+    Console.WriteLine("This is not a correct input.");
+}
+
+else
+{
+    int monthNumber = Day2 / 30;
+
+    switch (monthNumber)
+    {
+        case 0:
+            Console.WriteLine("It is January.");
+            break;
+        case 1:
+            Console.WriteLine("It is February.");
+            break;
+        case 2:
+            Console.WriteLine("It is March.");
+            break;
+        case 3:
+            Console.WriteLine("It is April.");
+            break;
+        case 4:
+            Console.WriteLine("It is May.");
+            break;
+        case 5:
+            Console.WriteLine("It is June.");
+            break;
+        case 6:
+            Console.WriteLine("It is July.");
+            break;
+        case 7:
+            Console.WriteLine("It is August.");
+            break;
+        case 8:
+            Console.WriteLine("It is October.");
+            break;
+        case 9:
+            Console.WriteLine("It is November.");
+            break;
+        case 10:
+            Console.WriteLine("It is December.");
+            break;
+        case 11:
+            Console.WriteLine("It is March.");
+            break;
+        default: Console.WriteLine("The number you entered is not correct.");
+            break;
+    }
+}
+
+//OPTION 2
+/*
+
+Write a program where information about the day type is shown in the console.
+
+Create an int type variable which represents the day number in the week.
+Using switch control, please print out if the day is working day or holiday.
+Try Your algorithm with the day number 2. The output should be “It is a working day”.
+Try Your algorithm with the day number 6. The output should be “It is holiday”.
+Try Your algorithm with the day number 10. Please add correct verification in the code!
+Try Your algorithm with the day number -4. Please add correct verification in the code!
+Please add the possibility to write the day number in the console. Read it, verify it and do an algorithm.
+*/
+
+
+Console.WriteLine("Please enter the day number:");
+int WeekDay = int.Parse(Console.ReadLine());
+
+switch (WeekDay)
+{
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+Console.WriteLine("It is a working day.");
+        break;
+    case 6:
+    case 7:
+        Console.WriteLine("It is a holyday.");
+        break;
+    default: Console.WriteLine("Invalid number.");
+        break;
+}
 
